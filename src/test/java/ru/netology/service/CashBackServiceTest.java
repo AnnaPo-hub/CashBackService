@@ -23,4 +23,5 @@ public class CashBackServiceTest {
         assertThrows(IllegalArgumentException.class, () -> cashBackService.remain(-1));
 
     }
+
 }

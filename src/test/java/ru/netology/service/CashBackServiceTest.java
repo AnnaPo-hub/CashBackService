@@ -1,6 +1,7 @@
 package ru.netology.service;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 public class CashBackServiceTest {
     CashBackService cashBackService = new CashBackService();
@@ -17,4 +18,9 @@ public class CashBackServiceTest {
         assertEquals(0, actual);
     }
 
+    @org.junit.Test
+    public void shouldThrowExceptionIfAmountLessThanZero() {
+        assertThrows(IllegalArgumentException.class, () -> cashBackService.remain(-1));
+
+    }
 }
